@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password_digest: MyString
+  height: 1
+  weight: 1
+  frequency_per_week: 1
+  gym_time_per_session: MyString
+
+two:
+  username: MyString
+  password_digest: MyString
+  height: 1
+  weight: 1
+  frequency_per_week: 1
+  gym_time_per_session: MyString
