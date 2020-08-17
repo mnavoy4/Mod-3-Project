@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  exercise: one
+  sets: 1
+  reps_per_set: 1
+  strength: false
+  muscle_group: MyString
+
+two:
+  user: two
+  exercise: two
+  sets: 1
+  reps_per_set: 1
+  strength: false
+  muscle_group: MyString
