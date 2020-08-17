@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>GitFit</title>
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container text-center">
+    <header>
+      <h1>Welcome to GitFit</h1>
+      <h3>You personal workout plan generator</h3>
+    </header>
+
+
+    <main>
+      <form id="sign-in-form" action="">
+        <div id="sign-in-form-div" class="form-group">
+          <input type="text" name="username" placeholder="Username" class="m-1">
+          <input type="password" name="password" placeholder="Password" class="m-1">
+          <br>
+          <input id="sign-in-submit" type="submit" class="btn btn-primary my-2">
+        </div>
+      </form>
+      <button id ="create-profile-btn" type="button" class ="btn btn-success">Create New Profile</button>
+      <form class='d-none' id='create-new-user' action="">
+        <div id='create-new-user-form-div' class="form-group">
+          <div class='my-3'>
+            <label for="username">Username: </label>
+            <input type="text" name="username" placeholder="Username" class="m-1">
+          </div>
+          <div class='my-3'>
+            <label for="password">Password: </label>
+            <input type="text" name="username" placeholder="Username" class="m-1">
+          </div>
+          <div class='my-3'>
+            <label for="height">Height (inches): </label>
+            <input type="number" name='height' placeholder='72 inches' class='m-1'>
+          </div>
+          <div class='my-3'>
+            <label for="weight">Weight (lbs):</label>
+            <input type="number" placeholder='0' name='weight' class='m-1'>
+          </div>
+          <div class="my-3">
+            <p>About how many days per week do you expect to workout?</p>
+            <select name="frequency_per_week">
+              <option value="1">1 Day</option>
+              <option value="2">2 Days</option>
+              <option value="3">3 Days</option>
+              <option value="4">4 Days</option>
+              <option value="5">5 Days</option>
+              <option value="6">6 Days</option>
+              <option value="7">7 Days</option>
+            </select>
+          </div>
+          <div>
+            <p>About how long do you spend working out per session?</p>
+            <div>
+              <input type="radio" value="30min-1hr" name="gym_time_per_session">
+              <label for="30min-1hr">30 Minutes - 60 Minutes</label>
+              <br>
+              <input type="radio" value="1hr-1.5hr" name="gym_time_per_session">
+              <label for="1hr-1.5hr">60 Minutes - 90 Minutes</label>
+              <br>
+              <input type="radio" value="1.5hr+" name="gym_time_per_session">
+              <label for="1.5hr+">Over 90 Minutes</label>
+            </div>
+          </div>
+          <input id='create-new-and-sign-in' class='btn btn-success' type="submit" value="Create New Profile and Sign In">
+        </div>
+      </form>
+  
+    </main>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
