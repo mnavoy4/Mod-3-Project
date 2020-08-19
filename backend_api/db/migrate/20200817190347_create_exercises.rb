@@ -3,7 +3,7 @@ class CreateExercises < ActiveRecord::Migration[6.0]
     create_table :exercises do |t|
       t.string :name
       t.string :description
-      t.integer :muscle_group
+      t.string :muscle_group
 
       t.timestamps
     end
