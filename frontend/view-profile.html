@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <script defer src='view-profile.js'></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="container">
@@ -19,69 +20,75 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">My Calender <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="main.html">My Calender <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My Profile</a>
+              <a class="nav-link" href="view-profile.html">My Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About GitFit</a>
+              <a class="nav-link" href="about.html">About GitFit</a>
+            </li>
+          </ul>
+          <ul class='navbar-nav ml-auto'>
+            <li class='nav-item ml-auto'>
+              <button id='logout-btn' class='btn btn-outline-danger'>Logout</button>
             </li>
           </ul>
         </div>
       </nav>
 
-
-    <h1>View and Edit Profile</h1>
-    <div id='my-profile'>
-      <form class='' id='edit-user-form'>
-        <div id='create-new-user-form-div' class="form-group">
-          <div class='my-3'>
-            <label for="username">Username: </label>
-            <input id='username' type="text" name="username" placeholder="Username" class="m-1">
-          </div>
-          <div class='my-3'>
-            <input id='password' type="hidden" name="password" placeholder="Password" class="m-1">
-          </div>
-          <div class='my-3'>
-            <input id='confirm-password' type="hidden" name="confirm-password" placeholder="Password" class="m-1">
-          </div>
-          <div class='my-3'>
-            <label for="height">Height (inches): </label>
-            <input id='height' type="number" name='height' placeholder='72 inches' class='m-1'>
-          </div>
-          <div class='my-3'>
-            <label for="weight">Weight (lbs):</label>
-            <input id='weight' type="number" placeholder='0' name='weight' class='m-1'>
-          </div>
-          <div class="my-3">
-            <p>About how many days per week do you expect to workout?</p>
-            <select id='frequency' name="frequency-per-week">
-              <option value="1">1 Day</option>
-              <option value="2">2 Days</option>
-              <option value="3">3 Days</option>
-              <option value="4">4 Days</option>
-              <option value="5">5 Days</option>
-              <option value="6">6 Days</option>
-              <option value="7">7 Days</option>
-            </select>
-          </div>
-          <div>
-            <p>About how long do you spend working out per session?</p>
-            <div>
-              <input type="radio" value="30min-1hr" name="gym-time-per-session">
-              <label for="30min-1hr">30 Minutes - 60 Minutes</label>
-              <br>
-              <input type="radio" value="1hr-1.5hr" name="gym-time-per-session">
-              <label for="1hr-1.5hr">60 Minutes - 90 Minutes</label>
-              <br>
-              <input type="radio" value="1.5hr+" name="gym-time-per-session">
-              <label for="1.5hr+">Over 90 Minutes</label>
+      <div class='text-center'>
+      <h1>View and Edit Profile</h1>
+      <div id='my-profile'>
+        <form class='' id='edit-user-form'>
+          <div id='create-new-user-form-div' class="form-group">
+            <div class='my-3'>
+              <label for="username">Username: </label>
+              <input id='username' type="text" name="username" placeholder="Username" class="m-1">
             </div>
+            <div class='my-3'>
+              <input id='password' type="hidden" name="password" placeholder="Password" class="m-1">
+            </div>
+            <div class='my-3'>
+              <input id='confirm-password' type="hidden" name="confirm-password" placeholder="Password" class="m-1">
+            </div>
+            <div class='my-3'>
+              <label for="height">Height (inches): </label>
+              <input id='height' type="number" name='height' placeholder='72 inches' class='m-1'>
+            </div>
+            <div class='my-3'>
+              <label for="weight">Weight (lbs):</label>
+              <input id='weight' type="number" placeholder='0' name='weight' class='m-1'>
+            </div>
+            <div class="my-3">
+              <p>About how many days per week do you expect to workout?</p>
+              <select id='frequency' name="frequency-per-week">
+                <option value="1">1 Day</option>
+                <option value="2">2 Days</option>
+                <option value="3">3 Days</option>
+                <option value="4">4 Days</option>
+                <option value="5">5 Days</option>
+                <option value="6">6 Days</option>
+                <option value="7">7 Days</option>
+              </select>
+            </div>
+            <div>
+              <p>About how long do you spend working out per session?</p>
+              <div>
+                <input type="radio" value="30min-1hr" name="gym-time-per-session">
+                <label for="30min-1hr">30 Minutes - 60 Minutes</label>
+                <br>
+                <input type="radio" value="1hr-1.5hr" name="gym-time-per-session">
+                <label for="1hr-1.5hr">60 Minutes - 90 Minutes</label>
+                <br>
+                <input type="radio" value="1.5hr+" name="gym-time-per-session">
+                <label for="1.5hr+">Over 90 Minutes</label>
+              </div>
+            </div>
+            <input id='edit-submit-button' class='btn btn-success' type="submit" value="Edit Profile">
           </div>
-          <input id='edit-submit-button' class='btn btn-success' type="submit" value="Edit Profile">
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 

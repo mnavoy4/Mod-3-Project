@@ -2,6 +2,7 @@
 require 'rest-client'
 Exercise.destroy_all
 User.destroy_all
+Workout.destroy_all
 api_URL = "https://wger.de/api/v2/exercise/?language=2&status=2"
 rest_client = RestClient::Request.execute(method: :get, url: api_URL, headers: {Authorization: "Token 98e0bc3f9a6818f516770ec54695cf310c4b63d3"}, timeout: 2000)
 rest_client_array = JSON.parse(rest_client)
@@ -38,12 +39,3 @@ rest_client_array.each do |exercise|
     )
   end
 end
-
-# Workout.create(
-#   user_id: 1,
-#   exercises: "6, 7",
-#   sets: 5,
-#   reps_per_set: 5,
-#   strength: true,
-#   muscle_group: 'legs'
-# )

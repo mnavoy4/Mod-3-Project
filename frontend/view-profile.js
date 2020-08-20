@@ -10,19 +10,36 @@ const usernameField = document.querySelector("#username");
 const heightField = document.querySelector('#height');
 const weightField = document.querySelector('#weight');
 const frequencyField = document.querySelector('#frequency');
+const logoutBtn = document.querySelector('#logout-btn');
+
+const captureEditUserFormData = (event) => {
+  const editUserFormData = new FormData(event.target);
+  const username = editUserFormData.get('username');
+  const password_digest = editUserFormData.get('password');
+  const height = parseInt(editUserFormData.get('height'));
+  const weight = parseInt(editUserFormData.get('weight'));
+  const frequencyPerWeek = parseInt(editUserFormData.get('frequency-per-week'));
+  const gymTimePerSession= editUserFormData.get('gym-time-per-session');
+  const user = { username, password_digest, height, weight, frequencyPerWeek, gymTimePerSession };
+  return user
+}
 
 const renderProfile = (user) => {
-  console.log(user);
-
   usernameField.value = user.username;
   heightField.value = user.height;
   weightField.value = user.weight;
   passwordInput.value = user.password_digest;
   editUserForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    user = captureEditUserFormData(event);
     editUser(user);
   })
 }
+
+logoutBtn.addEventListener('click', () => {
+  window.location.replace('index.html');
+  localStorage.removeItem('token');
+})
 
 document.addEventListener('DOMContentLoaded', fetch(profileURL, {
   method: 'GET',
@@ -44,18 +61,9 @@ const editUser = (user) => {
     body: JSON.stringify(user)
   })
     .then(response => response.json())
-    // .then(response => console.log(response))
 }
 
-// const captureNewUserFormData = (event) => {
-//   const createUserFormData = new FormData(event.target);
-//   const user_id = createUserFormData.get('id');
-//   const username = createUserFormData.get('username');
-//   const password_digest = createUserFormData.get('password');
-//   const height = parseInt(createUserFormData.get('height'));
-//   const weight = parseInt(createUserFormData.get('weight'));
-//   const frequencyPerWeek = parseInt(createUserFormData.get('frequency-per-week'));
-//   const gymTimePerSession= createUserFormData.get('gym-time-per-session');
-//   const user = { user_id, username, password_digest, height, weight, frequencyPerWeek, gymTimePerSession };
-//   return user
-// } 
+logoutBtn.addEventListener('click', () => {
+  window.location.replace('index.html');
+  localStorage.removeItem('token');
+})

@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>GitFit</title>
   <script defer src='main.js'></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
-    <nav class="my-3 navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="rounded my-3 navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">GitFit</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,22 +21,46 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">My Calender <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="main.html">My Calender <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="view-profile.html">My Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About GitFit</a>
+            <a class="nav-link" href="about.html">About GitFit</a>
+          </li>
+        </ul>
+        <ul class='navbar-nav ml-auto'>
+          <li class='nav-item ml-auto'>
+            <button id='logout-btn' class='btn btn-outline-danger'>Logout</button>
           </li>
         </ul>
       </div>
     </nav>
-    <button class='justify-content-center' id='generate-workout'>Generate Workout</button>
+
+    <form id='strength-and-muscle-params-form' class='text-center'>
+      <label for="muscle-group">Select a muscle group: </label>
+      <select name="muscle-group" id="muscle-group">
+        <option value="legs">Legs</option>
+        <option value="chest">Chest</option>
+        <option value="shoulders">Shoulders</option>
+        <option value="triceps">Triceps</option>
+        <option value="biceps">Biceps</option>
+      </select>
+      <div>
+        <input type="radio" value='strength' name='strength-or-hyper'>
+        <label for="strength">Strength</label>
+        <input type="radio" value='hyper' name='strength-or-hyper'>
+        <label for="hyper">Hypertrophy</label>
+      </div>
+      <input class='btn rounded btn-light' type="submit" value='Generate Workout'>
+    </form>
+    <div class='my-1 mb-3' id='display-workout'>
+
+    </div>
   </div>
     
-
-  <div id='calender' class="container col-sm-4 col-md-7 col-lg-8 mt-5">
+  <div id='calender' class="container mb-3 col-sm-4 col-md-7 col-lg-8 mt-4">
     <div class="card">
         <h3 class="card-header" id="monthAndYear"></h3>
         <table class="table table-bordered table-responsive-sm" id="calendar">
