@@ -6,6 +6,11 @@ class WorkoutsController < ApplicationController
     render json: @workouts, include: :exercises
   end
 
+  def show_all
+    @workouts = Workout.where(user_id: @user.id)
+    render json: @workouts, include: :exercises
+  end
+
   def create
     if @user.gym_time_per_session == '.5hr-1hr'
       sets = 3
@@ -24,8 +29,6 @@ class WorkoutsController < ApplicationController
       reps = 5
       strength = true
     end
-    # byebug
-
 
     @workout = Workout.create(
       user_id: @user.id,

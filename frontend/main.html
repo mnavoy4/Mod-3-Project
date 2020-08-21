@@ -27,6 +27,9 @@
             <a class="nav-link" href="view-profile.html">My Profile</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="my-progress.html">My Progress</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="about.html">About GitFit</a>
           </li>
         </ul>
@@ -61,7 +64,7 @@
   </div>
     
   <div id='calender' class="container mb-3 col-sm-4 col-md-7 col-lg-8 mt-4">
-    <div class="card">
+    <div class="card border border-dark">
         <h3 class="card-header" id="monthAndYear"></h3>
         <table class="table table-bordered table-responsive-sm" id="calendar">
             <thead>
@@ -88,7 +91,7 @@
             <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
         </div>
         <br/>
-        <form class="form-inline">
+        <form class="mb-1 justify-content-center form-inline">
             <label class="lead mr-2 ml-2" for="month">Jump To: </label>
             <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
                 <option value=0>Jan</option>

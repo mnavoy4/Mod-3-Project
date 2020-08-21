@@ -1,4 +1,5 @@
 body {
-  background: #22b0c3 no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(IMAGES/108132-light-blue-wave.jpg);
+  background-size: auto;
 }
